@@ -1,2 +1,5 @@
 *.DS_Store
 hw1/
+**/__pycache__/
+**/data*
+**/run_logs/
