@@ -3,3 +3,4 @@ hw1/
 **/__pycache__/
 **/data*
 **/run_logs/
+**/.vscode/
