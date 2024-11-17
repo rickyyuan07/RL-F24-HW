@@ -136,8 +136,8 @@ class MPCPolicy(BasePolicy):
         #       in batch, which can be much faster than looping through each
         #       action sequence.
 
-
-        current_obs = np.tile(obs, (N, 1))  # Shape: (N, D_obs)
+        D_obs = obs.shape[0]
+        current_obs = np.broadcast_to(obs, (N, D_obs))  # Shape: (N, D_obs)
 
         for t in range(H):
             actions = candidate_action_sequences[:, t, :]  # Shape: (N, D_action)
